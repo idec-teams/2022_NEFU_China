@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>iDEC NEFU_China 2022</title>
+		<link rel="stylesheet" type="text/css" href="../../CSS/main_cssstyle.css">
+		<script>
+			window.onload = function() {
+				var tfrow = document.getElementById('tfhover').rows.length;
+				var tbRow = [];
+				for (var i = ; i < tfrow; i++) {
+					tbRow[i] = document.getElementById('tfhover').rows[i];
+					tbRow[i].onmouseover = function() {
+						this.style.backgroundColor = '#f3f8aa';
+					};
+					tbRow[i].onmouseout = function() {
+						this.style.backgroundColor = '#ffffff';
+					};
+				}
+			};
+		</script>
+		<style>
+			.collapsible {
+				background-color: #e2efd9;
+				color: black;
+				cursor: pointer;
+				padding: 30px;
+				width: 100%;
+				border: 2px solid #3e4b5e;
+				border-radius: 5px;
+				outline: none;
+				font-size: 25px;
+				text-align: center;
+			}
+
+			/*.active, .collapsible:hover {
+				background-color: #555;
+			}*/
+
+			.content {
+				padding: 0 18px;
+				display: none;
+				overflow: hidden;
+				background-color: #f1f1f1;
+				text-align: center;
+			}
+
+			table.tftable {
+				text-align: center;
+				font-size: 25px;
+				color: #333333;
+				width: 100%;
+				border-width: 1px;
+				border-color: #e2efd9;
+				border-collapse: collapse;
+			}
+
+			table.tftable th {
+				font-size: 20px;
+				height: 50px;
+				width: 60px;
+				background-color: #e2efd9;
+				border-width: 1px;
+				padding: 8px;
+				border-style: solid;
+				border-color: #e2efd9;
+				text-align: center;
+			}
+
+			table.tftable tr {
+				font-size: 20px;
+				font-family: 'Merriweather';
+				height: 50px;
+				width: 60px;
+				background-color: #ffffff;
+			}
+
+			table.tftable td {
+				height: 50px;
+				font-size: 20px;
+				width: 60px;
+				font-family: 'Baskerville Old Face';
+				border-width: 1px;
+				border-style: solid;
+				border-color: #e2efd9;
+			}
+
+			header {
+				background: url("../../static/top/notebook.png");
+				min-height: 50%;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.page-title {
+				padding-top: 10em;
+				padding-bottom: 1.5em;
+			}
+
+			/* footer的样式 */
+			.contact-icon {
+				display: flex;
+				align-items: center;
+				/*font-size: 3em;*/
+				color: white;
+			}
+
+			.contact-icon a {
+				color: white;
+			}
+
+			.contact-icon i {
+				font-size: 3em;
+			}
+		</style>
+	</head>
+	<body>
+		<a class="skip-main" href="#slide1-chapter1">Skip to main content</a>
+		<header>
+			<nav id="normal-nav">
+				<!---- 常规导航栏Navigation bar (normal) -->
+				<div class="logo">
+					<img style="max-height: 22em" id="nav-logo" src="../../static/logo.png"
+						alt="This is our logo, but if you click it, you will return home">
+				</div>
+				<div class="chapters">
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="https://idec2021.github.io/NEFU_China/">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Home
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Team
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="../team/members.html" class="dropdown-page cool-link2">
+								Members
+							</a>
+							<a href="../team/attributions.html" class="dropdown-page cool-link2">
+								Attributions
+							</a>
+						</div>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Project
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="../project/description.html" class="dropdown-page cool-link2">
+								Description
+							</a>
+							<a href="../project/design.html" class="dropdown-page cool-link2">
+								Design
+							</a>
+							<a href="../project/results.html" class="dropdown-page cool-link2">
+								Results
+							</a>
+							<a href="../../static/Report.pdf" class="dropdown-page cool-link2">
+								Report
+							</a>
+							<a href="../../static/Supplementary information.pdf" class="dropdown-page cool-link2">
+								Supplementary information
+							</a>
+						</div>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Documentation
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="../documentation/experiments.html" class="dropdown-page cool-link2">
+								Experiments
+							</a>
+							<a href="../documentation/notebook.html" class="dropdown-page cool-link2">
+								Notebook
+							</a>
+							<a href="../documentation/safety.html" class="dropdown-page cool-link2">
+								Safety
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<!------------ 页面标题PAGE TITLE -------------------->
+			<div class="page-title">
+				<div class="page-title-content">
+					<h1>NOTEBOOK</h1>
+					<!---Page title -->
+				</div>
+			</div>
+		</header>
+		<div class="grid-normal">
+			<!--------------Introduction/Summary--------------------->
+			<div class="introduction grid-normal">
+			</div>
+		</div>
+		<div style="display:none" id="marker" class="triangle-down"> </div>
+		<!------------------ BUTTONS ---------------------------->
+		<div class="buttons">
+			<div class="button-name">
+			</div>
+		</div>
+		<div class="sections-container">
+			<div class="carousel" style="margin:10%;">
+				<h2>Here's a track of what we have done: </h2>
+				<h2>(Click the block to view the hidden content) </h2>
+				<div class="slider">
+					<!------------------------------ section 1------------------------------------>
+					<section class="slide-sections">
+						<div class="main-body">
+							<div class="main-body-content">
+								<button type="button" class="collapsible"> April</button>
+								<div class="content">
+									<ol>
+										<li>pYB1a-PobR-mCherry-Cmr constructing experiment</li>
+										<li>pYT1a-ttgR-mCherry-Cmr constructing experiment</li>
+										<li>pYB1a-mutator-T7(wt promoter) constructing experiment</li>
+										<li>pRBlS-single-T7 constructing experiment</li>
+										<li>pRBI2s-single-T7-STS constructing experiment</li>
+										<li>pRl2s-reverse-T7 constructing experiment</li>
+									</ol>
+								</div>
+								<button type="button" class="collapsible"> May</button>
+								<div class="content">
+									<ol>
+										<li>pYT1a-ttgR-mCherry-Kana constructing experiment</li>
+										<li>pYB1a-mutator(mut) constructing experiment</li>
+										<li>pLI2s-single or dual-T7-STS-oripir constructing experiment</li>
+										<li>Mutation 1-8cycle</li>
+									</ol>
+								</div>
+								<button type="button" class="collapsible"> June</button>
+								<div class="content">
+									<ol>
+										<li>pYT1a-ttgRmut-mCherry-Kana constructing experiment</li>
+										<li>pYT1a-responsive-ttgR constructing experiment</li>
+										<li>Mutation 9-21cycle</li>
+										<li>Characterization based on these two plasmids pYT1a-ttgRmut-mCherry-Kana and
+											pYT1a-responsive-ttgR</li>
+									</ol>
+								</div>
+								<button type="button" class="collapsible"> July</button>
+								<div class="content">
+									<ol>
+										<li>glb2a-PpobA*2-mCherry-Cmr-SacB constructing experiment</li>
+									</ol>
+								</div>
+								<button type="button" class="collapsible">August</button>
+								<div class="content">
+									<ol>
+										<li>glb2a-PpobA*2-mCherry-Cmr-SacB constructing experiment </li>
+										<li>gYb2a-PpobA*2-mCherry-SacB-Cmr constructing experiment</li>
+										<li>Selection based on these two plasmids glb2a-PpobA*2-mCherry-Cmr-SacB and
+											gYb2a-PpobA*2-mCherry-SacB-Cmr
+
+									</ol>
+								</div>
+								<button type="button" class="collapsible">September</button>
+								<div class="content">
+									<ol>
+										<li>gYb2a-PpobA*2-mCherry-CD-Cmr constructing experiment</li>
+										<li>Selection based on the plasmid gYb2a-PpobA*2-mCherry-CD-Cmr</li>
+									</ol>
+								</div>
+							</div>
+
+							<script>
+								var coll = document.getElementsByClassName("collapsible");
+								var i;
+
+								for (i = 0; i < coll.length; i++) {
+									coll[i].addEventListener("click", function() {
+										this.classList.toggle("active");
+										var content = this.nextElementSibling;
+										if (content.style.display === "block") {
+											content.style.display = "none";
+										} else {
+											content.style.display = "block";
+										}
+									});
+								}
+							</script>
+							<p style="text-align: left;margin:5%;">Download : Here is our <a
+									href="../../static/notebook.zip" target="_blank">original
+									notebook</a>.</p>
+							<!-- summary table-->
+							<div style="margin-bottom: 3%;">
+								<h1>Here's a summary of what we have done. </h1>
+							</div>
+							<table id="tfhover" class="tftable" border="1">
+
+								<th colspan="4" style="font-size: 40px;font-family: 'Baskerville Old Face'">
+									Important experiments table</th>
+
+								<tr>
+									<!-- <th width:60px></th>-->
+									<th>Date</th>
+									<th>Member</th>
+									<th>Experiment</th>
+									<th>Result</th>
+								</tr>
+
+								<tr>
+									<td>7.20-8.27</td>
+									<td>Qianwen Jin,Fenglin Tao,Yuzhu Wang</td>
+									<td>Constructed the plasmid gYB2a-pobRWT-mCherry-codA-cmr</td>
+									<td>Our target plasmid has been constructed successfully.</td>
+								</tr>
+								<tr>
+									<td rowspan="4">8.28-9.10</td>
+									<td rowspan="4">Xiaoya Wei,Yangbohui Yang,Jiale Li,Linshan Cao,Chengjie Dong
+									</td>
+
+									<td>Validation of PobR<sup>WT</sup></td>
+									<td>PobR<sup>WT</sup> exhibited a high degree of ligand specificity with a
+										narrow dynamic range.</td>
+								</tr>
+								<tr>
+									<td>Validating the feasibility of a dual selection system</td>
+									<td>The dual selection system is feasible.</td>
+								</tr>
+								<tr>
+									<td>Test the capacity of our mutant library</td>
+									<td>The selection capacity for each compound was more than 900,000 clones (with
+										at least four plates about 450,000 CFU/mL.)</td>
+								</tr>
+								<tr>
+									<td>Dual selection significantly reduces the response of the sensor to natural
+										substrates</td>
+									<td>The obtained PobR mutants exhibited significantly reduced basal expression
+										and robustly attenuated 4HB responsiveness compared to that of
+										PobR<sup>WT</sup>.</td>
+								</tr>
+								<tr>
+									<td>9.11-9.29</td>
+									<td>Jianing Li,
+										Xinyao Yuan,
+										Yuetong Zhu
+									</td>
+									<td>Selecting the PobR mutation library</td>
+									<td>We obtained a biosensor that the fluorescence intensity was at least
+										1.5-fold higher than that of the negative control.</td>
+								</tr>
+							</table>
+						</div>
+						<p></p>
+						<p style="text-align: left; margin: 5% 0 5%;font-size: 25px"> Download : Here is <a
+								href="../../static/notebook/notebook-1002-1.pdf" target="_blank">detailed notebook
+							</a>mentioned on this table. If you want to see table stating which experiment
+							contributed to which report figure, please <a
+								href="../../static/notebook/Table stating which experiment contributed to which report figure.xlsx">
+								click here</a>.</p>
+						<p><a href="https://zenodo.org/record/7134806#.Yzw3zNhBxPY" target="_blank" style="font-size: 25px">Click here to
+								see all our raw experimental data</a>.</p>
+				</div>
+			</div>
+			</section>
+		</div>
+		<a href="#" id="mobile-to-top-arrow" class="to-top">
+			<p style="font-size: 20px;">TOP</p>
+			<img style="max-height: 60px" src="../../static/home/top.png">
+		</a>
+		<!---------- 页脚FOOTER ------------>
+		<footer>
+			<div>
+				<div class="c-footer">
+					<div class="u-container">
+						<div class="u-hide-print">
+							<div class="c-footer__header">
+							</div>
+							<div class="c-footer__grid">
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">About us</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="#" data-track="click">
+												This team is composed of enthusiastic students
+												from three different colleges and various majors. To spy out the secrets
+												of directed evolution, a group of beginners are looking forward to
+												creating extraordinary experiences and we did it.</a></li>
+									</ul>
+								</div>
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">Contact info</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="#" data-track="click">
+												Email : iDEC_NEFU_2022@163.com</a></li>
+										<li class="c-footer__item"><a href="#" data-track="click">
+												Address : Northeast
+												Forestry University, Harbin,
+												Heilongjiang 150040, P. R. China</a></li>
+									</ul>
+								</div>
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">About topic</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="#" data-track="click"> A dual selection
+												system for directed evolution to identify allosteric transcription
+												factor PobR variants responsive to different aromatic compounds
+											</a></li>
+									</ul>
+								</div>
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">Quicklinks</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="../project/description.html"
+												data-track="click">Description</a></li>
+										<li class="c-footer__item"><a href="../project/design.html"
+												data-track="click">Design</a></li>
+										<li class="c-footer__item"><a href="../project/results.html"
+												data-track="click">Result</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c-corporate-footer">
+				<div class="u-container">
+					<img src="../../static/logo.png" width="120px" height="40px">
+					<p class="c-corporate-footer__legal">iDEC-2022 NEFU_China</p>
+				</div>
+			</div>
+		</footer>
+
+
+		<script src="../../js/jQuery.js" type=text/javascript></script>
+		<script src="../../js/detect.js" type="text/javascript"></script>
+		<script src="../../js/main_javascript.js" type=text/javascript></script>
+		<script src="../../js/MoveContent.js" type="text/javascript"></script>
+
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				MoveContentOutside();
+			});
+		</script>
+	</body>
+</html>
