@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>iDEC NEFU_China 2022</title>
+		<link rel="stylesheet" type="text/css" href="../../CSS/main_cssstyle.css">
+
+		<style>
+			.collapsible {
+				background-color: #d3c1fd;
+				color: black;
+				cursor: pointer;
+				padding: 35px;
+				width: 100%;
+				border: 4px solid #ffffff;
+				border-radius: 15px;
+				outline: none;
+				font-size: 24px;
+				text-align: center;
+				font-weight: bold;
+
+			}
+
+			/*.active, .collapsible:hover {
+            background-color: #555;
+        }*/
+
+			.content {
+				padding: 0 18px;
+				display: none;
+				overflow: hidden;
+				background-color: #f1f1f1;
+				text-align: left;
+				font-size: 16px;
+			}
+
+
+			header {
+				background: url("../../static/top/protocol.png");
+				min-height: 50%;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.page-title {
+				padding-top: 10em;
+				padding-bottom: 1.5em;
+			}
+
+			/* footer的样式 */
+			.contact-icon {
+				display: flex;
+				align-items: center;
+				/*font-size: 3em;*/
+				color: white;
+			}
+
+			.contact-icon a {
+				color: white;
+			}
+
+			.contact-icon i {
+				font-size: 3em;
+			}
+		</style>
+	</head>
+	<body>
+		<a class="skip-main" href="#slide1-chapter1">Skip to main content</a>
+		<header>
+			<nav id="normal-nav">
+				<!---- 常规导航栏Navigation bar (normal) -->
+				<div class="logo">
+					<img style="max-height: 22em" id="nav-logo" src="../../static/logo.png"
+						alt="This is our logo, but if you click it, you will return home">
+				</div>
+				<div class="chapters">
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="https://idec2022.github.io/NEFU_China/">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Home
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Team
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="../team/members.html" class="dropdown-page cool-link2">
+								Members
+							</a>
+							<a href="../team/attributions.html" class="dropdown-page cool-link2">
+								Attributions
+							</a>
+						</div>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Project
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="../project/description.html" class="dropdown-page cool-link2">
+								Description
+							</a>
+							<a href="../project/design.html" class="dropdown-page cool-link2">
+								Design
+							</a>
+							<a href="../project/protocol.html" class="dropdown-page cool-link2">
+								Protocol
+							</a>
+							<a href="../project/results.html" class="dropdown-page cool-link2">
+								Results
+							</a>
+							<a href="../../static/Report.pdf" class="dropdown-page cool-link2">
+								Report
+							</a>
+							<a href="../../static/Supplementary information.pdf" class="dropdown-page cool-link2">
+								Supplementary information
+							</a>
+						</div>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Documentation
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="../documentation/experiments.html" class="dropdown-page cool-link2">
+								Experiments
+							</a>
+							<a href="../documentation/notebook.html" class="dropdown-page cool-link2">
+								Notebook
+							</a>
+							<a href="../documentation/safety.html" class="dropdown-page cool-link2">
+								Safety
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<!------------ 页面标题PAGE TITLE -------------------->
+			<div class="page-title">
+				<div class="page-title-content">
+					<h1>PROTOCOL</h1>
+					<!---Page title -->
+				</div>
+			</div>
+		</header>
+		<div class="grid-normal">
+			<!--------------Introduction/Summary--------------------->
+			<div class="introduction grid-normal">
+			</div>
+		</div>
+		<div style="display:none" id="marker" class="triangle-down"> </div>
+		<!------------------ BUTTONS ---------------------------->
+		<div class="buttons">
+			<div class="button-name">
+			</div>
+		</div>
+		<div class="sections-container">
+			<div class="carousel" style="margin:10%;">
+				<h2>Here are our protocols: </h2>
+				<p></p>
+				<h2>This section shows details of the experiments that are not shown in detail in the notebook.</h2>
+				<h2>(Click the block to view the hidden content) </h2>
+				<p></p>
+				<button type="button" class="collapsible"> Connection</button>
+				<div class="content">
+
+					<p style="font-size: 16px">This protocol is used to connect two or more pieces of DNA together. For
+						more detailed information, please <a href="../../static/protocol/CONNECTION.pdf">click on the
+							link</a>.</p>
+				</div>
+				<button type="button" class="collapsible">Gel recovery</button>
+				<div class="content">
+
+					<p>This protocol is used to recycle the correct tape from the recycled adhesive. For more detailed
+						information, please <a href="../../static/protocol/Gel recovery.pdf">click on the link</a>.</p>
+				</div>
+				<button type="button" class="collapsible">Nucleic acid & protein electrophoresis</button>
+				<div class="content">
+
+					<p>This protocol concludes two types of the electrophoresis used to detect target DNA or protein.
+						For more detailed information, please <a
+							href="../../static/protocol/Nucleic acid & protein electrophoresis.pdf">click on the
+							link</a>.</p>
+				</div>
+				<button type="button" class="collapsible">PCR product purification</button>
+				<div class="content">
+					<p>This protocol is used to purify PCR products (in case of single band detected by gel
+						electrophoresis). For more detailed information, please <a
+							href="../../static/protocol/PCR product purification.pdf">click on the link</a>.</p>
+				</div>
+				<button type="button" class="collapsible">Plasmid DNA extraction</button>
+				<div class="content">
+
+					<p>This protocol is used to extract plasmid DNA from E. coli. For more detailed information, please
+						<a href="../../static/protocol/Plasmid DNA extraction.pdf">click on the link</a>.</p>
+				</div>
+				<button type="button" class="collapsible">Polymerase chain reaction (PCR) </button>
+				<div class="content">
+
+					<p>This protocol is used to amplify target DNA fragment for plasmid construction or other use. For
+						more detailed information, please <a
+							href="../../static/protocol/Polymerase chain reaction.pdf">click on the link</a>.</p>
+				</div>
+				<button type="button" class="collapsible">Preparation of electrocompetent cells </button>
+				<div class="content">
+
+					<p>This protocol is used to prepare electrocompetent cells with high transformation efficiency. For
+						more detailed information, please <a
+							href="../../static/protocol/Preparation of electrocompetent cells.pdf">click on the
+							link</a>.</p>
+				</div>
+				<button type="button" class="collapsible">Restriction endonuclease reactions </button>
+				<div class="content">
+
+					<p>This protocol is used to having restriction endonuclease reactions based on endonuclease by NEB.
+						For more detailed information, please <a
+							href="../../static/protocol/Restriction endonuclease reactions.pdf">click on the link</a>.
+					</p>
+				</div>
+				<button type="button" class="collapsible">Transformation </button>
+				<div class="content">
+
+					<p>This protocol is used to transform plasmid DNA into competent cells by chemical method or
+						electroporation. For more detailed information, please <a
+							href="../../static/protocol/Transformation.pdf">click on the link</a>.</p>
+				</div>
+				<script>
+					var coll = document.getElementsByClassName("collapsible");
+					var i;
+
+					for (i = 0; i < coll.length; i++) {
+						coll[i].addEventListener("click", function() {
+							this.classList.toggle("active");
+							var content = this.nextElementSibling;
+							if (content.style.display === "block") {
+								content.style.display = "none";
+							} else {
+								content.style.display = "block";
+							}
+						});
+					}
+				</script>
+			</div>
+		</div>
+		</section>
+		</div>
+		<a href="#" id="mobile-to-top-arrow" class="to-top">
+			<p style="font-size: 20px;">TOP</p>
+			<img style="max-height: 60px" src="../../static/home/top.png">
+		</a>
+		<!---------- 页脚FOOTER ------------>
+		<footer>
+			<div>
+				<div class="c-footer">
+					<div class="u-container">
+						<div class="u-hide-print">
+							<div class="c-footer__header">
+							</div>
+							<div class="c-footer__grid">
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">About us</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="#" data-track="click">
+												This team is composed of enthusiastic students
+												from three different colleges and various majors. To spy out the secrets
+												of directed evolution, a group of beginners are looking forward to
+												creating extraordinary experiences and we did it.</a></li>
+									</ul>
+								</div>
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">About topic</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="#" data-track="click"> A dual selection
+												system for directed evolution to identify allosteric transcription
+												factor PobR variants responsive to different aromatic compounds
+											</a></li>
+									</ul>
+								</div>
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">Quicklinks</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="pages/project/description.html"
+												data-track="click">Description</a></li>
+										<li class="c-footer__item"><a href="pages/project/design.html"
+												data-track="click">Design</a></li>
+										<li class="c-footer__item"><a href="pages/project/results.html"
+												data-track="click">Result</a></li>
+									</ul>
+								</div>
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">Contact info</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="#" data-track="click">
+												Email : iDEC_NEFU_2022@163.com</a></li>
+										<li class="c-footer__item"><a href="#" data-track="click">
+												Address : Northeast
+												Forestry University, Harbin,
+												Heilongjiang 150040, P. R. China</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c-corporate-footer">
+				<div class="u-container">
+					<img src="static/logo.png" width="120px" height="40px">
+					<p class="c-corporate-footer__legal">iDEC-2022 NEFU_China</p>
+				</div>
+			</div>
+		</footer>
+
+
+		<script src="../../js/jQuery.js" type=text/javascript></script>
+		<script src="../../js/detect.js" type="text/javascript"></script>
+		<script src="../../js/main_javascript.js" type=text/javascript></script>
+		<script src="../../js/MoveContent.js" type="text/javascript"></script>
+
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				MoveContentOutside();
+			});
+		</script>
+	</body>
+</html>

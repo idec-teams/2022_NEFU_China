@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>iDEC NEFU_China 2022</title>
+		<link rel="stylesheet" type="text/css" href="../../CSS/main_cssstyle.css">
+		<style>
+			header {
+				background: url("../../static/top/design.png");
+				min-height: 50%;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.page-title {
+				padding-top: 10em;
+				padding-bottom: 1.5em;
+			}
+
+			/* footer的样式 */
+			.contact-icon {
+				display: flex;
+				align-items: center;
+				/*font-size: 3em;*/
+				color: white;
+			}
+
+			.contact-icon a {
+				color: white;
+			}
+
+			.contact-icon i {
+				font-size: 3em;
+			}
+		</style>
+	</head>
+	<body>
+
+		<a class="skip-main" href="#slide1-chapter1">Skip to main content</a>
+		<header>
+			<nav id="normal-nav">
+				<!---- 常规导航栏Navigation bar (normal) -->
+				<div class="logo">
+					<img style="max-height: 22em" id="nav-logo" src="../../static/logo.png"
+						alt="This is our logo, but if you click it, you will return home">
+				</div>
+				<div class="chapters">
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="https://idec2022.github.io/NEFU_China/">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Home
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Team
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="../team/members.html" class="dropdown-page cool-link2">
+								Members
+							</a>
+							<a href="../team/attributions.html" class="dropdown-page cool-link2">
+								Attributions
+							</a>
+						</div>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Project
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="../project/description.html" class="dropdown-page cool-link2">
+								Description
+							</a>
+							<a href="../project/design.html" class="dropdown-page cool-link2">
+								Design
+							</a>
+							<a href="../project/protocol.html" class="dropdown-page cool-link2">
+								Protocol
+							</a>
+							<a href="../project/results.html" class="dropdown-page cool-link2">
+								Results
+							</a>
+							<a href="../../static/Report.pdf" class="dropdown-page cool-link2">
+								Report
+							</a>
+							<a href="../../static/Supplementary information.pdf" class="dropdown-page cool-link2">
+								Supplementary information
+							</a>
+						</div>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Documentation
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="../documentation/experiments.html" class="dropdown-page cool-link2">
+								Experiments
+							</a>
+							<a href="../documentation/notebook.html" class="dropdown-page cool-link2">
+								Notebook
+							</a>
+							<a href="../documentation/safety.html" class="dropdown-page cool-link2">
+								Safety
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<!------------ 页面标题PAGE TITLE -------------------->
+			<div class="page-title">
+				<div class="page-title-content">
+					<h1>DESIGN</h1>
+					<!---Page title -->
+				</div>
+			</div>
+		</header>
+		<div class="grid-normal">
+			<div class="introduction grid-normal">
+			</div>
+		</div>
+		<div style="display:none" id="marker" class="triangle-down"> </div>
+		<!------------------ BUTTONS ---------------------------->
+		<div class="buttons">
+		</div>
+		<div class="sections-container">
+			<aside class="sticky">
+				<div id="sub-nav" class="sub-navigation-content">
+					<div class="sub-navigation-chapter cool-link2">
+						<a class="main-nav-link" linkedidchapter="slide1-chapter1">Biosensor</a>
+						<!------Chapter one -->
+					</div>
+					<div class="sub-navigation-chapter cool-link2">
+						<a class="main-nav-link" linkedidchapter="slide1-chapter2">Directed evolution</a>
+						<!------Chapter Two -->
+					</div>
+					<div class="sub-navigation-chapter cool-link2">
+						<a class="main-nav-link" linkedidchapter="slide1-chapter3">Test</a>
+						<!------Chapter Three -->
+					</div>
+					<div class="sub-navigation-chapter cool-link2">
+						<a class="main-nav-link" linkedidchapter="slide1-chapter4">References</a>
+						<!------Chapter Four -->
+					</div>
+					<!--返回顶部箭头-->
+					<div id="to-top-arrow">
+						<a title="Back to top" href="#"><i class="fas fa-chevron-circle-up"></i></a>
+						<!------Chapter Three -->
+					</div>
+				</div>
+			</aside>
+			<div class="carousel">
+				<div class="slider">
+					<!------------------------------ section 1------------------------------------>
+					<section class="slide-sections">
+						<div class="main-body">
+							<div class="main-body-content">
+								<div style="margin-top: 40px">
+									<p>Our project aims to develop a dual selection system consisting of negative and
+										positive selections to identify PobR mutants responsive to different aromatic
+										compounds. </p>
+								</div>
+								<div id="slide1-chapter1">
+									<h2>Biosensor</h2>
+									<p>
+										<b>An allosteric TF (aTF), PobR </b>
+									</p>
+									<p>An aTF-based biosensor can respond to a specific compound, or a series of
+										compounds with similar structures, and subsequently activate reporter gene
+										expression <a linkedidchapter="r1"
+											class="main-nav-link hyperlink"><sup>[1-6]</sup></a>. The TF PobR belongs to
+										the iclR superfamily, and is a positive transcriptional regulator of the pobA
+										gene involved in 4-hydroxybenzoic acid (4HB) metabolism in Acinetobacter <a
+											linkedidchapter="r6" class="main-nav-link hyperlink"><sup>[7]</sup></a>.</p>
+									<p>Last Year, our team developed a PobR-based biosensor responsive to a 4HB analog,
+										hydroxymandelic acid (HMA) <a linkedidchapter="r6"
+											class="main-nav-link hyperlink"><sup>[8]</sup></a>. These results strongly
+										indicated that PobR had the potential to be modified to become biosensors for a
+										variety of aromatic compounds.</p>
+								</div>
+								<div id="slide1-chapter2">
+									<h2>Directed evolution</h2>
+									<p>
+										<b>Construction of the PobR mutant library </b>
+									</p>
+									<p>In order to construct a PobR library with random mutagenesis, we employed the
+										approach of error-prone PCR amplification. The generated PobR mutants were
+										subcloned into the vector containing P<sub>pobA</sub>, <i>mCherry</i>,
+										<i>codA</i> and <i>cmr</i>.
+									</p>
+									<div class="figure-container" style="width: 50%; margin: 0 auto;">
+										<img src="../../static/design/design1.png" alt="">
+									</div>
+									<p>
+										<b>The dual selection system </b>
+									</p>
+									<p>After random mutagenesis to generate a PobR library, we wanted to eliminate the
+										PobR mutants that were either still responsive to 4HB or constitutively active
+										in driving the P<sub>pobA</sub> independent of any ligand. For this purpose, we
+										designed a dual selection system.</p>
+									<p>We first constructed a negative selection system consisting of the promoter
+										P<sub>pobA</sub> and the CD enzyme coding sequence. The CD enzyme could convert
+										exogenously added 5-FC to 5-FU that killed bacteria, and this mechanism allowed
+										us to eliminate both PobR mutants still responsive to 4HB and pseudo-positive
+										mutants.</p>
+									<p>Secondly, we constructed a positive selection system through inserting the
+										chloramphenicol resistance gene downstream of the P<sub>pobA</sub> promoter to
+										help us select the PobR mutants with desired ligand specificity.</p>
+									<p>We also added a reporter gene, <i>mCherry</i>, encoding a red fluorescence, in
+										the selection system. The fluorescence intensity was proportional to the ligand
+										binding affinity of PobR mutants that subsequently activated the
+										P<sub>PobA</sub> promoter.</p>
+									<div class="figure-container" style="width: 50%; margin: 0 auto;">
+										<img src="../../static/design/design2.png" alt="">
+									</div>
+									<p>In the negative selection, the obtained bacteria were cultivated in liquid
+										culture supplemented by 4HB and 5-FC. </p>
+									<p>In the positive selection, bacteria were cultured in a selective liquid medium
+										supplemented with different aromatic compounds and chloramphenicol.</p>
+									<p>Next, we further characterized the responsiveness of selected PobR mutants to any
+										aromatic compound through evaluating the induction of downstream genes and
+										obtained mutants that were responsive to different aromatic compounds.</p>
+								</div>
+								<div class="figure-container" style="width: 50%; margin: 0 auto;">
+									<img src="../../static/design/design3.png" alt="">
+								</div>
+
+								<div id="slide1-chapter3">
+									<h2>Test</h2>
+									<p>
+										<b>Identification of amino acid mutations in selected PobR mutants </b>
+									</p>
+									<p>DNA sequencing of the selected PobR mutants was carried out to determine their
+										mutation sites and classify the mutated amino acids.</p>
+									<p>
+										<b>Modeling and docking </b>
+									</p>
+									<p>To envision the effects of amino acid substitutions on the response of PobR
+										proteins and their interactions with small molecule ligands, we used SWISS-MODEL
+										<a linkedidchapter="r6" class="main-nav-link hyperlink"><sup>[9]</sup></a> to
+										simulate the protein structures and Autodock <a linkedidchapter="r6"
+											class="main-nav-link hyperlink"><sup>[10]</sup></a> to mimic the docking of
+										different aromatic compounds to the proteins.
+									</p>
+									<p>Using bioinformatic methods to process molecular docking, we evaluated how an
+										amino acid mutation could affect ligand association with the binding pocket of
+										the PobR mutant and predicted the alteration of binding affinity.</p>
+									<div class="figure-container" style="width: 40%;margin: 0 auto;">
+										<img src="../../static/design/design4.png" alt="">
+									</div>
+									<div class="references" id="slide1-chapter4"
+										style="margin-bottom: 10%;font-size: 25px;">
+										<h2>References</h2>
+										<ol>
+											<li id="r1">Galvão TC, de Lorenzo V. Transcriptional regulators à la carte:
+												engineering new effector specificities in bacterial regulatory proteins.
+												Curr Opin Biotechnol. 2006 Feb;17(1):34-42. doi:
+												10.1016/j.copbio.2005.12.002.</li>
+											<li>Tang SY, Fazelinia H, Cirino PC. AraC regulatory protein mutants with
+												altered effector specificity. J Am Chem Soc. 2008 Apr
+												16;130(15):5267-71. doi: 10.1021/ja7109053.</li>
+											<li>Taylor ND, Garruss AS, Moretti R, Chan S, Arbing MA, Cascio D, Rogers
+												JK, Isaacs FJ, Kosuri S, Baker D, Fields S, Church GM, Raman S.
+												Engineering an allosteric transcription factor to respond to new
+												ligands. Nat Methods. 2016 Feb;13(2):177-83. doi: 10.1038/nmeth.3696.
+											</li>
+											<li> Jha RK, Chakraborti S, Kern TL, Fox DT, Strauss CE. Rosetta comparative
+												modeling for library design: Engineering alternative inducer specificity
+												in a transcription factor. Proteins. 2015 Jul;83(7):1327-40. doi:
+												10.1002/prot.24828.</li>
+											<li>Jha RK, Kern TL, Kim Y, Tesar C, Jedrzejczak R, Joachimiak A, Strauss
+												CE. A microbial sensor for organophosphate hydrolysis exploiting an
+												engineered specificity switch in a transcription factor. Nucleic Acids
+												Res. 2016 Sep 30;44(17):8490-500. doi: 10.1093/nar/gkw687.</li>
+											<li id="r6"> Ellefson JW, Ledbetter MP, Ellington AD. Directed evolution of
+												a
+												synthetic phylogeny of programmable Trp repressors. Nat Chem Biol. 2018
+												Apr;14(4):361-367. doi: 10.1038/s41589-018-0006-7.</li>
+											<li id="r7">DiMarco AA, Averhoff B, Ornston LN. Identification of the
+												transcriptional activator pobR and characterization of its role in the
+												expression of pobA, the structural gene for p-hydroxybenzoate
+												hydroxylase in Acinetobacter calcoaceticus. J Bacteriol. 1993
+												Jul;175(14):4499-506. doi: 10.1128/jb.175.14.4499-4506.1993.</li>
+											<li id="r8"> Liang Y, Luo J, Yang C, Guo S, Zhang B, Chen F, Su K, Zhang Y,
+												Dong Y, Wang Z, Fu H, Sui G, Wang P. Directed evolution of the PobR
+												allosteric transcription factor to generate a biosensor for
+												4-hydroxymandelic acid. World J Microbiol Biotechnol. 2022 May
+												3;38(6):104. doi: 10.1007/s11274-022-03286-5.</li>
+											<li id="r9">Waterhouse A, Bertoni M, Bienert S, Studer G, Tauriello G,
+												Gumienny R, Heer FT, de Beer TAP, Rempfer C, Bordoli L, Lepore R,
+												Schwede T. SWISS-MODEL: homology modelling of protein structures and
+												complexes. Nucleic Acids Res. 2018 Jul 2;46(W1):W296-W303. doi:
+												10.1093/nar/gky427. </li>
+											<li id="r10">Forli S, Huey R, Pique ME, Sanner MF, Goodsell DS, Olson AJ.
+												Computational protein-ligand docking and virtual drug screening with the
+												AutoDock suite. Nat Protoc. 2016 May;11(5):905-19. doi:
+												10.1038/nprot.2016.051.</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<a href="#" id="mobile-to-top-arrow" class="to-top">
+			<p style="font-size: 20px;">TOP</p>
+			<img style="max-height: 60px" src="../../static/home/top.png">
+		</a>
+
+		<!---------- 页脚FOOTER ------------>
+		<footer>
+			<div>
+				<div class="c-footer">
+					<div class="u-container">
+						<div class="u-hide-print">
+							<div class="c-footer__header">
+							</div>
+							<div class="c-footer__grid">
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">About us</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="#" data-track="click">
+												This team is composed of enthusiastic students
+												from three different colleges and various majors. To spy out the secrets
+												of directed evolution, a group of beginners are looking forward to
+												creating extraordinary experiences and we did it.</a></li>
+									</ul>
+								</div>
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">About topic</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="#" data-track="click"> A dual selection
+												system for directed evolution to identify allosteric transcription
+												factor PobR variants responsive to different aromatic compounds
+											</a></li>
+									</ul>
+								</div>
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">Quicklinks</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="pages/project/description.html"
+												data-track="click">Description</a></li>
+										<li class="c-footer__item"><a href="pages/project/design.html"
+												data-track="click">Design</a></li>
+										<li class="c-footer__item"><a href="pages/project/results.html"
+												data-track="click">Result</a></li>
+									</ul>
+								</div>
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">Contact info</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="#" data-track="click">
+												Email : iDEC_NEFU_2022@163.com</a></li>
+										<li class="c-footer__item"><a href="#" data-track="click">
+												Address : Northeast
+												Forestry University, Harbin,
+												Heilongjiang 150040, P. R. China</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c-corporate-footer">
+				<div class="u-container">
+					<img src="static/logo.png" width="120px" height="40px">
+					<p class="c-corporate-footer__legal">iDEC-2022 NEFU_China</p>
+				</div>
+			</div>
+		</footer>
+
+
+		<script src="../../JS/jQuery.js" type=text/javascript></script>
+		<script src="../../JS/detect.js" type="text/javascript"></script>
+		<script src="../../JS/main_javascript.js" type=text/javascript></script>
+		<script src="../../JS/MoveContent.js" type="text/javascript"></script>
+		<script src="https://kit.fontawesome.com/50c1a3d91f.js" crossorigin="anonymous"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				MoveContentOutside();
+			});
+		</script>
+	</body>
+</html>
