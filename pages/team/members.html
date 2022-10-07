@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>iDEC NEFU_China 2022</title>
+		<link rel="stylesheet" type="text/css" href="../../css/main_cssstyle.css">
+		<style>
+			* {
+				box-sizing: border-box;
+				font-weight: normal;
+				/*text-align: center;*/
+			}
+			/* 去掉头图黑色部分 */
+			header {
+				background: url("../../static/top/s.png");
+				min-height: 100%;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.page-title {
+				padding-top: 10em;
+			}
+
+			.flip {
+				position: relative;
+				text-align: center;
+				/*padding: 0.2em;!*翻转卡片会出现错位*!*/
+			}
+
+			.flip>.front,
+			.flip>.back {
+				display: block;
+				transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				transition-duration: .5s;
+				transition-property: transform, opacity;
+			}
+
+			.flip>.front {
+				transform: rotateY(0deg);
+			}
+
+			.flip>.back {
+				position: absolute;
+				opacity: 0;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				transform: rotateY(-180deg);
+			}
+
+			.flip:hover>.front {
+				transform: rotateY(180deg);
+			}
+
+			.flip:hover>.back {
+				opacity: 1;
+				transform: rotateY(0deg);
+			}
+
+			.flip.flip-vertical>.back {
+				transform: rotateX(-180deg);
+			}
+
+			.flip.flip-vertical:hover>.front {
+				transform: rotateX(180deg);
+			}
+
+			.flip.flip-vertical:hover>.back {
+				transform: rotateX(0deg);
+			}
+
+			.flip {
+				position: relative;
+				display: inline-block;
+				margin: 40px 20px;
+				/*margin-bottom: 2em;*/
+				width: 280px;
+				/*卡片宽度*/
+			}
+
+			.flip>.front,
+			.flip>.back {
+				display: block;
+				color: white;
+				width: inherit;
+				background-size: cover !important;
+				background-position: center !important;
+				height: 380px;
+				/*卡片高度*/
+				padding: 1em 2em;
+				background: #313131;
+				border-radius: 10px;
+			}
+
+			.flip>.front p,
+			.flip>.back p {
+				font-size: 0.9125rem;
+				line-height: 160%;
+				color: #999;
+			}
+		</style>
+	<body>
+
+		<a class="skip-main" href="#slide1-chapter1">Skip to main content</a>
+		<header>
+			<nav id="normal-nav">
+				<!---- 常规导航栏Navigation bar (normal) -->
+				<div class="logo">
+					<img style="max-height: 22em" id="nav-logo" src="../../static/logo.png"
+						alt="This is our logo, but if you click it, you will return home">
+				</div>
+				<div class="chapters">
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="https://idec-teams.github.io/2022_NEFU_China/">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Home
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Team
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="../team/members.html" class="dropdown-page cool-link2">
+								Members
+							</a>
+							<a href="../team/attributions.html" class="dropdown-page cool-link2">
+								Attributions
+							</a>
+						</div>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Project
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="../project/description.html" class="dropdown-page cool-link2">
+								Description
+							</a>
+							<a href="../project/design.html" class="dropdown-page cool-link2">
+								Design
+							</a>
+							<a href="../project/protocol.html" class="dropdown-page cool-link2">
+								Protocol
+							</a>
+							<a href="../project/results.html" class="dropdown-page cool-link2">
+								Results
+							</a>
+							<a href="../../static/report.pdf" class="dropdown-page cool-link2">
+								Report
+							</a>
+							<a href="../../static/supplementary information.pdf" class="dropdown-page cool-link2">
+								Supplementary information
+							</a>
+						</div>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav" href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Documentation
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="../documentation/experiments.html" class="dropdown-page cool-link2">
+								Experiments
+							</a>
+							<a href="../documentation/notebook.html" class="dropdown-page cool-link2">
+								Notebook
+							</a>
+							<a href="../documentation/safety.html" class="dropdown-page cool-link2">
+								Safety
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<!------------ 页面标题PAGE TITLE -------------------->
+			<div class="page-title">
+				<div class="page-title-content" style="margin-top: 10%;">
+					<!-- <h1>MEMBERS</h1> -->
+					<!---Page title -->
+				</div>
+			</div>
+		</header>
+		<!--------------Introduction/Summary--------------------->
+		<div class="grid-normal">
+			<div class="introduction grid-normal">
+			</div>
+		</div>
+		<div class="sections-container">
+			<div class="carousel">
+				<div class="slider">
+					<!------------------------------ section 1------------------------------------>
+					<section class="slide-sections">
+						<div class="main-body">
+							<div class="main-body-content">
+								<div id="slide1-chapter1">
+									<img style="width: 25%;margin-top: 5%;" src="../../static/members/team.png" alt="">
+									<div class="team-flexbox">
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/fhd.png)">
+											</div>
+											<div class="back">
+												<h1>Hongda Fu</h1>
+												<p>I majored in forestry,
+													and this is my second year to
+													participate in international
+													competitions (but I look very old,
+													so I doesn't look like a rookie). 
+													I have a very high enthusiasm for
+													scientific research.I hope to
+													live up to this good idea this year
+													and make a good result.
+												</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/lj.png)">
+											</div>
+											<div class="back">
+												<h1>Juan Luo</h1>
+												<p>I am a senior in the College of Life Sciences. In life, I prefer to
+													learn new things and challenge myself. In my spare time, I will
+													choose to read books or watch movies. At the same time, I am also
+													very interested in natural science and hope to learn something from
+													it.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="slide1-chapter2">
+									<img style="width: 20%;margin-top: 5%" src="../../static/members/students.png"
+										alt="">
+									<div class="team-flexbox">
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/ljn.png)">
+											</div>
+											<div class="back">
+												<h1>Jianing Li</h1>
+												<p>
+													Hello, everyone! I am Jianing Li, an avid lover of synthetic biology
+													and long-distance running. I believe that Heavy is the head who
+													wears the crown. </p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/cls.png)">
+											</div>
+											<div class="back">
+												<h1>Linshan Cao</h1>
+												<p>
+													I am Linshan Cao from the NEFU team. I am honored to participate in
+													this competition and grow together with everyone. There are no
+													people in the world who do not pursue success, enthusiastically and
+													bravely, and can achieve success. </p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/jqw.png)">
+											</div>
+											<div class="back">
+												<h1>Qianwen Jin</h1>
+												<p>I am Qianwen Jin, the "construction warrior" in the NEFU team. I like
+													to immerse myself in the laboratory. I think the most romantic,
+													bravest and happiest thing in the world is to keep my pure love and
+													rely on my efforts to benefit all mankind.</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/ljl.png)">
+											</div>
+											<div class="back">
+												<h1>Jiale Li</h1>
+												<p>I'm Jiale Li, a member of this team. We have an indomitable spirit,
+													always majestic curiosity. We are a team, and we are fulfilling each
+													other's dreams and making ourselves better. The sunflowers are in
+													full
+													bloom and the breeze is blowing slowly, looking forward to us
+													together! </p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/wxy.png)">
+											</div>
+											<div class="back">
+												<h1>Xiaoya Wei</h1>
+												<p>
+													Hi, I am Xiaoya Wei. Can you believe that there is a “duckling” who
+													can do experiments? This is because of my lovely nickname, duckling.
+												</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/yxy.png)">
+											</div>
+											<div class="back">
+												<h1>Xinyao Yuan</h1>
+												<p>My name is Xinyao Yuan, a member of the NEFU_China. Looking back to
+													the competition which continues for almost one year, bitterness is
+													whenever we catch up with the deadline, while happiness is when we
+													stay together and get excellent experiment results. By the way, I
+													like musicals especially the Hamilton!</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/yybh.png)">
+											</div>
+											<div class="back">
+												<h1>Yangbohui Yang</h1>
+												<p>Hello, my name is Yangbohui Yang. My motto is "The heart of call not
+													to.” I have a wonderful time in NEFU team, and I hope we can achieve
+													excellent results in IDEC competition!</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/zyt.png)">
+											</div>
+											<div class="back">
+												<h1>Yuetong Zhu</h1>
+												<p>Hello everyone, my name is Yuetong Zhu. I am a third-year student of
+													life science in Northeast Forestry University. I am participating in
+													IDEC to learn knowledge and experimental skills and meet new
+													friends. As a member of IDEC, I am mainly responsible for the
+													experimental part and happy to work with everyone at IDEC.</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/wyz.png)">
+											</div>
+											<div class="back">
+												<h1>Yuzhu Wang</h1>
+												<p>I'm Yuzhu Wang from NEFU team. Life is not perfect. Instead of
+													bringing more frustration and complaints, it's better to have the
+													belief that you can make your life better through hard work. I
+													believe we will win the best result.</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/tfl.png)">
+											</div>
+											<div class="back">
+												<h1>Fenglin Tao</h1>
+												<p>My name is Fenglin Tao，who likes drawing and doing research. I am
+													responsible for sensor construction and product detection in the
+													team. Working on problems often makes me happy and satisfied.</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/dcj.png)">
+											</div>
+											<div class="back">
+												<h1>Chengjie Dong</h1>
+												<p>Hey! I am Chengjie Dong, 20 years old, a member of NEFU_China. In the
+													daily study and experiment, I deepened my understanding of
+													biological research and gained many friendships. Hope tomorrow will
+													be better.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div id="slide1-chapter3">
+									<img style="width: 18%;margin-top: 5%" src="../../static/members/advisors.png"
+										alt="">
+									<div class="team-flexbox">
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/lyy.png)">
+											</div>
+											<div class="back">
+												<h1>Yaoyao Liang</h1>
+												<p>I claim to be the gentlest mentor of NEFU team, do not lose my temper
+													more than eight times a day. I took half of my life to lead the
+													team. Hope to do a Ph.D. at at Edinburgh University due to my obsession
+													with Harry Potter.
+												</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/dhx.png)">
+											</div>
+											<div class="back">
+												<h1>Hongxuan Du</h1>
+												<p>Hello, everyone, I am Hongxuan Du from the beautiful town of Daqing,
+													Heilongjiang Province, my hometown is rich in oil, and beautiful
+													wetlands, known as the lungs of the earth, welcome everyone to have
+													the opportunity to play! My hobbies are swimming, reading and
+													meditating and meditation can let me into a new world!
+												</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/members/w.jpg)">
+											</div>
+											<div class="back">
+												<h1>Yanwei Wang</h1>
+												<p>Hello, my name is Yanwei Wang. In my daily life, what I do most is to
+													do experiments and watch animes. May all the beauty be blessed.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="slide1-chapter4">
+									<img style="width: 50%;margin-top: 5%" src="../../static/members/professional Instructors.png " alt="">
+
+									<div class="team-flexbox" style="margin-bottom: 10%;">
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/pi/gcs.png)">
+											</div>
+											<div class="back">
+												<h1>GuangChao Sui</h1>
+												<p>Guangchao Sui, Ph.D：The research area：Molecular biology,
+													biochemistry, cell biology, genetics and epigenetics, and cancer
+													biology.</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../../static/pi/pcw.png)">
+											</div>
+											<div class="back">
+												<h1>Pengchao Wang</h1>
+												<p>Pengchao Wang，Ph.D: The research area: Metabolic engineering for
+													value-added chemicals, synthetic biology.
+												</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front" style="background-image: url(../../static/pi/tcb.jpg)">
+											</div>
+											<div class="back">
+												<h1>Chunbo Teng</h1>
+												<p>Chunbo Teng, ph.D: The research area: Cell biology, developmental
+													biology and molecular biology.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<a href="#" id="mobile-to-top-arrow" class="to-top">
+			<p style="font-size: 20px;">TOP</p>
+			<img style="max-height: 60px" src="../../static/home/top.png">
+		</a>
+		<!---------- 页脚FOOTER ------------>
+		<footer>
+			<div>
+				<div class="c-footer">
+					<div class="u-container">
+						<div class="u-hide-print">
+							<div class="c-footer__header">
+							</div>
+							<div class="c-footer__grid">
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">About us</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="#" data-track="click">
+												This team is composed of enthusiastic students
+												from three different colleges and various majors. To spy out the secrets
+												of directed evolution, a group of beginners are looking forward to
+												creating extraordinary experiences and we did it.</a></li>
+									</ul>
+								</div>
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">About topic</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="#" data-track="click"> A dual selection
+												system for directed evolution to identify allosteric transcription
+												factor PobR variants responsive to different aromatic compounds
+											</a></li>
+									</ul>
+								</div>
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">Quicklinks</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="pages/project/description.html"
+												data-track="click">Description</a></li>
+										<li class="c-footer__item"><a href="pages/project/design.html"
+												data-track="click">Design</a></li>
+										<li class="c-footer__item"><a href="pages/project/results.html"
+												data-track="click">Result</a></li>
+									</ul>
+								</div>
+								<div class="c-footer__group">
+									<h3 class="c-footer__heading">Contact info</h3>
+									<ul class="c-footer__list">
+										<li class="c-footer__item"><a href="#" data-track="click">
+												Email : iDEC_NEFU_2022@163.com</a></li>
+										<li class="c-footer__item"><a href="#" data-track="click">
+												Address : Northeast
+												Forestry University, Harbin,
+												Heilongjiang 150040, P. R. China</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c-corporate-footer">
+				<div class="u-container">
+					<img src="../../static/logo.png" width="120px" height="40px">
+					<p class="c-corporate-footer__legal">iDEC-2022 NEFU_China</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="../../js/jQuery.js" type=text/javascript></script>
+		<script src="../../js/detect.js" type="text/javascript"></script>
+		<script src="../../js/main_javascript.js" type=text/javascript></script>
+		<script src="../../js/MoveContent.js" type="text/javascript"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				MoveContentOutside();
+			});
+		</script>
+	</body>
+</html>
