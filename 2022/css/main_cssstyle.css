@@ -54,7 +54,7 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: "Merriweather"
+	font-family: "geometos"
 }
 
 a,
@@ -1123,9 +1123,10 @@ a:visited.chapter-nav {
 .page-title-content h1 {
 	color: white;
 	font-size: 8em;
+	margin-top:45px;
 	font-weight: normal;
 	text-align: center;
-	font-family: "Merriweather";
+	font-family: "camar";
 	/*小标题*/
 }
 
